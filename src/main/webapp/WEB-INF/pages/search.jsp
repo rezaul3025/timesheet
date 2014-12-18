@@ -29,8 +29,8 @@
                         <form:form role="form" method="post" action="/timesheet/search"
                                    commandName="search" enctype="multipart/form-data" class="form-horizontal" >
                             <div class="form-group">
-                                <label for="projectListSearchAd" class="col-sm-4 control-label">Search by project</label>
-                                <div class="col-sm-8">
+                                <label for="projectListSearchAd" class="col-sm-3 control-label">Search by project</label>
+                                <div class="col-sm-9">
                                     <form:select path="searchProjectId" class="form-control" id="projectListSearchAd">
                                         <form:option value="-1">--<spring:message code="ts.selectproject" text="Select project" />--</form:option>
                                         <c:if test="${!empty projects}" >
@@ -46,15 +46,15 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="searchByOptions" class="col-sm-4 control-label">Search by options</label>
-                                <div class="col-sm-8">
+                                <label for="searchByOptions" class="col-sm-3 control-label">Search by options</label>
+                                <div class="col-sm-9">
                                     <form:select path="searchOptionId" class="form-control" id="searchByBookingOption">
                                     </form:select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="searchByMonth" class="col-sm-4 control-label">Search by Month</label>
-                                <div class="col-sm-8">
+                                <label for="searchByMonth" class="col-sm-3 control-label">Search by Month</label>
+                                <div class="col-sm-9">
                                     <form:select path="searchMonth" class="form-control">
                                         <form:option value="-1">--<spring:message code="ts.selectoption" text="Select month" />--</form:option>
                                         <c:forEach var="month" items="${months}">
@@ -68,8 +68,8 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="searchByUser" class="col-sm-4 control-label">Search by user</label>
-                                <div class="col-sm-8">
+                                <label for="searchByUser" class="col-sm-3 control-label">Search by user</label>
+                                <div class="col-sm-9">
                                     <form:select path="searchUser" class="form-control">
                                         <form:option value="-1">--<spring:message code="ts.selectUser" text="Select User" />--</form:option>
                                         <c:forEach var="user" items="${users}">
@@ -83,21 +83,21 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="searchFromDate" class="col-sm-4 control-label">From date</label>
-                                <div class="col-sm-8">
+                                <label for="searchFromDate" class="col-sm-3 control-label">From date</label>
+                                <div class="col-sm-9">
                                     <fmt:formatDate pattern="MM/dd/yyyy" value="${searchkey.searchFromDate}" var="searchFromDate" />
                                     <form:input path="searchFromDate" value="${searchFromDate}"  class="form-control" id="searchFromDate" placeholder="From date" />
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="searchToDate" class="col-sm-4 control-label">To date</label>
-                                <div class="col-sm-8">
+                                <label for="searchToDate" class="col-sm-3 control-label">To date</label>
+                                <div class="col-sm-9">
                                     <fmt:formatDate pattern="MM/dd/yyyy" value="${searchkey.searchToDate}" var="searchToDate" />
                                     <form:input path="searchToDate" value="${searchToDate}" class="form-control" id="searchToDate" placeholder= "To date" />
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="col-sm-offset-8 col-sm-8">
+                                <div class="col-sm-offset-9 col-sm9">
                                     <input type="submit" class="btn btn-primary " value="<spring:message code="ts.search" text="Search" />" />
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                                 </div>
