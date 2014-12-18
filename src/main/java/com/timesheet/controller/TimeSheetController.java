@@ -446,7 +446,6 @@ public class TimeSheetController
     @RequestMapping(value = "/registercompany", method = RequestMethod.POST)
     public ModelAndView registerComapny(@ModelAttribute("company") Company company, @RequestParam("file") MultipartFile file)
     {
-        ModelAndView mav = new ModelAndView("redirect:/company-reg");
 
         try
         {
@@ -493,6 +492,8 @@ public class TimeSheetController
         {
             Logger.getLogger(TimeSheetController.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        ModelAndView mav = new ModelAndView("redirect:/index");
 
         return mav;
     }
